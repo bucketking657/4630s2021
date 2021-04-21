@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.test.farm6">
+
+    <application
+        android:name=".FarmApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Farm6">
+
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        //Login in and Registration
+        <activity android:name=".RegisterBuyerActivity"/>
+        <activity android:name=".RegisterSellerActivity"/>
+        <activity android:name=".RegisterActivity"
+                    android:exported="true"/>
+
+        //Farmer
+        <activity android:name = ".Farmer.FarmerMainActivity"/>
+        <activity android:name = ".Farmer.FarmerOrderList"/>
+        <activity android:name = ".Farmer.FarmerOrderDisplayActivity"/>
+        <activity android:name = ".Farmer.FarmerStockListActivity"/>
+        <activity android:name = ".Farmer.FarmerStockUpdateChoiceActivity"/>
+        <activity android:name = ".Farmer.FarmerStockNewActivity"/>
+        <activity android:name = ".Farmer.FarmerStockDisplayActivity"/>
+
+        //Buyer
+        <activity android:name = ".Buyer.BuyerMainActivity"/>
+        <activity android:name = ".Buyer.BuyerMyFarmersListActivity"/>
+        <activity android:name = ".Buyer.BuyerCurrentOrderActivity"/>
+        <activity android:name = ".Buyer.BuyerFindFarmersListActivity"/>
+        <activity android:name = ".Buyer.BuyerFindFarmerDisplayActivity"/>
+        <activity android:name = ".Buyer.BuyerPlacedOrderListActivity"/>
+        <activity android:name = ".Buyer.BuyerPlacedOrderDisplayActivity"/>
+        <activity android:name = ".Buyer.BuyerViewFarmerStockListActivity"/>
+        <activity android:name = ".Buyer.BuyerViewFarmerStockDisplayActivity"/>
+
+    </application>
+
+</manifest>

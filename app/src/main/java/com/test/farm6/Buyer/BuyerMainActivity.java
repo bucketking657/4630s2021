@@ -2,6 +2,7 @@ package com.test.farm6.Buyer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,6 +16,11 @@ public class BuyerMainActivity extends AppCompatActivity {
     private Button myFarmers;
     private Button findFarmers;
     private Button currentOrder;
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.shoppingmenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
     @Override
     protected void onCreate (Bundle savedInstanceState){

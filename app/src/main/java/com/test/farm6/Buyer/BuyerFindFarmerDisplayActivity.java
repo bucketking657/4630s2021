@@ -2,6 +2,7 @@ package com.test.farm6.Buyer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,6 +21,11 @@ public class BuyerFindFarmerDisplayActivity extends AppCompatActivity {
     private Farmer farmer;
     private FarmApplication app;
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.shoppingmenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -32,7 +38,6 @@ public class BuyerFindFarmerDisplayActivity extends AppCompatActivity {
         add = findViewById(R.id.Add);
         add_and_view = findViewById(R.id.Add_And_View);
         farmer = getIntent().getParcelableExtra("selected_farmer");
-        System.out.println("Farmerid: " + farmer.getId());
         find_Farmer_business_name.setText(farmer.getBusinessName());
         find_Farmer_address.setText(farmer.getAddress());
         find_farmer_city.setText(farmer.getCity());
@@ -40,7 +45,7 @@ public class BuyerFindFarmerDisplayActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("here "+farmer.getId());
+
                 app.getDao().addFarmerToUserList(farmer, app.getCurrentUser());
                 Intent intent = new Intent(BuyerFindFarmerDisplayActivity.this, BuyerFindFarmersListActivity.class);
                 intent.putExtra("selected_farmer", farmer);

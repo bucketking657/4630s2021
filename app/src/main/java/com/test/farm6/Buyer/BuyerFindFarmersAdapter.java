@@ -46,10 +46,8 @@ public class BuyerFindFarmersAdapter extends RecyclerView.Adapter<BuyerFindFarme
         TextView address;
         FindFarmerClickListener listener;
 
-
         public FindFarmerViewHolder(@NonNull View itemView, FindFarmerClickListener listener) {
             super(itemView);
-
             business_name = itemView.findViewById(R.id.find_farmer_List_business_name);
             address = itemView.findViewById(R.id.find_farmer_list_address);
             itemView.setOnClickListener(this);

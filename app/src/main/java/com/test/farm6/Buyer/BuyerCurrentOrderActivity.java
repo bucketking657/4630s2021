@@ -1,6 +1,7 @@
 package com.test.farm6.Buyer;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,6 +15,11 @@ public class BuyerCurrentOrderActivity extends AppCompatActivity  {
     private TextView current_order_products;
     private Button edit;
     private Button place_order;
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.shoppingmenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState){

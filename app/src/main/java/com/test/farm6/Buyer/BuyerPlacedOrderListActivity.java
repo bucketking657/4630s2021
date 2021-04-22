@@ -2,6 +2,8 @@ package com.test.farm6.Buyer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +18,11 @@ public class BuyerPlacedOrderListActivity extends AppCompatActivity implements B
     private final ArrayList<Order> list = new ArrayList<>();
     private RecyclerView order_View;
     private FarmApplication farmApp;
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.shoppingmenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

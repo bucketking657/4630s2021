@@ -2,6 +2,7 @@ package com.test.farm6.Buyer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -24,6 +25,12 @@ public class BuyerViewFarmerStockListActivity extends AppCompatActivity implemen
     private Farmer farmer;
     private User user;
     private BuyerViewFarmerStockAdapter adapter;
+
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.shoppingmenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

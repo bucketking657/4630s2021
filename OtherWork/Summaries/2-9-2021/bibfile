@@ -1,0 +1,41 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 2/9/2021
+% Summary 1 
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary on Boeing Software Failures}
+\author{Joshua Shilts}
+\date{February 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+
+The author in Introduction to the Special Issue on Urban Computing and Smart Cities presents and summaries four articles that present methods for utilizing the vast amount of urban data being generated from the rapidly growing network infrastructure. The author states that this data can help understand and solve various challenges facing urban environments such as facility planning and air pollution.  By utilizing user mobility data for example we can improve existing algorithms that could mitigate problems that arise from passenger arrivals and waiting times in the urban environment[2]. In addition to that, another way we could utilize this data is to combine user mobility data and geographical data to improve trajectories for transportation[3]. I found this interesting because learning how to deal with new data will help solve today and even tomorrow’s problems. More importantly, it opens lucrative opportunities that can be utilized to not only improve life in urban areas but exploited monetarily.
+
+\section{Abstract}
+No abstract available.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1} 
+Andy Pasztor Updated Jan. 17, 2020 6:41 pm ET
+\\Boeing Finds New Software Problem That Could Complicate 737 MAX’s Return. The Wall Street Journal 
+\\https://www.wsj.com/articles/boeing-finds-new-software-problem-that-could-complicate-737-max-return-11579290347
+
+\bibitem{Article cited 2} 
+David Schaper March 9, 2020 6:21 PM ET 
+\\Ethiopian Officials Say Faulty Boeing Software Played Role In Deadly 737 Max Crash. National Public Radio
+\\https://www.npr.org/2020/03/09/813740173/ethiopian-officials-say-faulty-boeing-software-played-role-in-deadly-737-max-cra
+
+\end{thebibliography}
+\end{document}

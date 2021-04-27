@@ -1,0 +1,51 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 2/9/2021
+% Summary 2
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary on 60 minuets Investigation to Big Data and Chinese Government}
+\author{Joshua Shilts}
+\date{February 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+
+This summary is on the attempts by the Chinese government to collect American citizen medical data presented by 60 minutes. Jon Wertheim investigates the claims by the U.S. government that state that this collection of American health data represent a threat to our nation security and economy. I feel this is relevant because who controls that data will be able revolutionize the medical industry and provide more personalized care for patients before that patient even realizes they need it. It is relevant to me because if another government get this data, we the consumer, have no oversight to how it is going to be utilized. Secondly, it will affect American companies who employ a lot of software engineers, pharmacist, and doctors by eliminating treatments and procedures because they are able to micro target a patient before they even display symptoms of an illness or disease. For example, if all our treatments, vaccines prescriptions are all dependent on a foreign source specifically the Chinese government not the Chinese people, how safe will we, and our companies be and what oversight and transparency can we have to ensure this is not being used for nefarious purposes. I find this interesting because this is again bringing us back to the questions, we ask about our own social media companies which is what best ethical approach to big data and the power is the power of certainty it gives to these companies and in the case foreign governments.
+
+\section{Abstract}
+No abstract available.
+
+\newpage
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1} 
+Jon Wertheim Jan. 31, 2021
+\\China's push to control Americans' health care future. CBS 60 Minuets
+\\https://www.cbsnews.com/news/biodata-dna-china-collection-60-minutes-2021-01-31/
+
+\bibitem{Article cited 2} 
+Bill Evanina Jan. 31, 2021
+\\Former top counterintelligence official
+\\https://www.cbsnews.com/news/biodata-dna-china-collection-60-minutes-2021-01-31/
+
+\bibitem{Article cited 3} 
+Edward You Jan. 31, 2021
+\\FBI Supervisory Special Agent Edward
+\\https://www.cbsnews.com/news/biodata-dna-china-collection-60-minutes-2021-01-31/
+
+\bibitem{Article cited 4} 
+Sophie Richardson Jan. 31, 2021
+\\Director of the China program for Human Rights Watch
+\\https://www.cbsnews.com/news/biodata-dna-china-collection-60-minutes-2021-01-31/
+\end{thebibliography}
+\end{document}

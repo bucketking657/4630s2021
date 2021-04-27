@@ -1,0 +1,33 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 4/27/2021
+% Summary 2
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 2}
+\author{Joshua Shilts}
+\date{April 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+In this article research is done on how STEM bridge programs which allow post undergrad student and other who have no college experience a pathway to getting an education in STEM. The research seeks to see if this unconventional approach is actually feasible by interviewing students who both passed and failed this program. This is interesting because the demand for stem jobs is outpacing the amount of amount of stem students graduating each year. If this is implemented on a larger scale then this might be a way to solve this problem as well as offer people another pathway to join the stem program. I think this is relevant because I am someone who definitely qualifies as one of their candidates and if I was offered this 11 week program instead of having to go to school for 4-5 years afters being out of school for 10 then this would have of course been a more feasible option for me.
+
+\section{Abstract}
+The necessity for a steady STEM workforce has prompted academia to develop strategies to encourage people of diverse backgrounds to enter the STEM fields. A bridge program, also known as a conversion program, offers alternative pathways for individuals who have no prior computing education to receive the education that can help in developing their careers or acquiring a graduate-level degree in the computer science fields. This mixed-methods study consisted of two parts. First, an online post-baccalaureate bridge program was evaluated, with a focus on students’ performance. Factors for analysis included gender, prior major, and the length of the program, any or all of which might play a role in students’ unsuccessful attempts to complete the program. The results indicated that female students have a higher tendency to not complete the program. However, female students who completed the program and enrolled in a graduate school have as much potential to do well in the MS program as their male cohorts do. The second part of the study comprised a survey of students who completed or did not complete the program and interviews with women students. Grounded in self-determination theory (SDT), the results showed that strategies are needed to enhance women students’ perceived competence and relatedness in the program.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Hui-Ching Kayla Hsu and Nasir Memon. 2021. Crossing the Bridge to STEM: Retaining Women Students in an Online CS Conversion Program. ACM Trans. Comput. Educ. 21, 2, Article 11 (April 2021), 16 pages. DOI:https://doi-org.umasslowell.idm.oclc.org/10.1145/3440892
+
+\end{thebibliography}
+\end{document}

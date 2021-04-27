@@ -1,0 +1,33 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 4/4/2021
+% Summary 1
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 2}
+\author{Joshua Shilts}
+\date{April 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+In this article researchers at a startup called Quantum Brilliance are developing a quantum computer the size of a graphics card which is very different from other contemporary approaches. This is interesting because they are using synthetic diamonds to deal with the high temperatures that are usually associated with quantum computers.  This is why according to the article most quantum computers are enclosed in server sized cabinets and require a lot of power to keep them running optimally. However this new material enables them to scale down the size of their computer to a desktop machine or a 19 inch rack. This is relevant because quantum computing is the going to be the next break through for computer science, and it is going to be a breakthrough that is going to change literally everything in our field. From our the strength of our encryption to our ability to compute complex equation that were before not computable it will make a these impact but more interestingly if something like this and at this size I am, curious if it will be available to the public for gaming specifically.
+
+\section{Abstract}
+No abstract for this Article
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Charles Q. Choi. 05 April 2021. Diamond-Based Quantum Accelerator Puts Qubits in a Server Rack
+https://spectrum.ieee.org/tech-talk/computing/hardware/nitrogen-vacancy-diamond-quantum-computer-accelerator-qubits-server-rack
+\end{thebibliography}
+\end{document}

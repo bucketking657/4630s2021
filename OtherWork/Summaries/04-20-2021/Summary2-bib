@@ -1,0 +1,33 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 4/20/2021
+% Summary 2
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 2}
+\author{Joshua Shilts}
+\date{April 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+In this article researchers developed a PUF, or physically unclonable function with randomly interconnected logic gate to create a sort of deterministic chaos to make devices harder and maybe even impossible to hack.This was interesting because the researchers state that even if hackers have access to your device it would take too long for the to record all possible combinations. This is interesting because current PUFs' contain only a limited number of secret combinations so a hacker with enough time and the right tech can learn the secrets of this chip. This is relevant because because it utilizes chaos theory which we went over briefly in my engineering physics class and it is interesting to see a theory implement with logic gates which was something else we learned about. Seeing how these two both have merge together demonstrates how we can take something we learn in another subject and apply it to programming or another engineering practice to provide a new option for people and companies to utilize.
+
+\section{Abstract}
+No abstract for this article
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Payal Dhar. 19 April 2021. A Hacker's Nightmare: Programmable Chips Secured by Chaos 
+https://spectrum.ieee.org/tech-talk/computing/hardware/chaos-programmable-chips-secure
+\end{thebibliography}
+\end{document}

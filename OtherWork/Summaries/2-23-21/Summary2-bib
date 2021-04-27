@@ -1,0 +1,31 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 2/22/2021
+% Summary 2 
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary Study of Visual perception in Cathedral of Saint John}
+\author{Joshua Shilts}
+\date{February 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+This article I found relevant because it incorporates 3D scanning in historical structures to get a better idea of how light affects the iconography in historical places such as the cathedral of saint Johns. This is relevant because they are using 3D rendering software which is a relatively new tool that combined with things like AI or automation offers fields like archaeology new less invasive ways to observe and understand historical sites. One example I can think of is With the rise of ISIS in 2012 one of the many insidious acts they committed was destroying UNESCO world heritage sites. These site and all there secrets are now lost forever to the world. If the 3D rendering software and autonomous drones however had mapped any of these objects before their destruction we would still have highly detailed 3D models to not only for analysis but also to admire. This is why I find it interesting because it a new tool at an archaeologist disposal that combined with other like autonomous drones can offer these researchers more data than they have every had before.
+
+\section{Abstract}
+A challenging aspect of visibility studies is visual acuity, which concerns the clarity of vision within a given space in relation to variables such as spatial geometry, lighting conditions, the physical properties of the viewed object, or the familiarity of viewers with the target. Our research proposes a novel approach to visibility studies, based on visual acuity and its related pipeline, which integrates qualitative and quantitative aspects such as the cultural background of viewers, the illumination values of space, contrast, and size of objects of interest as well as their meaning and context. The proposed pipeline relies on 3D documentation of the investigated space, light measurements, research in optics, trigonometry calculations, and 3D GIS set against images and architectural space. The method's effectiveness is demonstrated in the study of the iconography of the Cathedral of St. John the Theologian in Nicosia, Cyprus, the work hypothesis being that the church's spatial organization, choice of scenes, and level of detail were carefully planned to establish visual narratives with strong political and religious connotations and to overall dictate the ways the building was accessed and experienced. The method can be broadly applied for visibility analyses in a variety of case-studies in closed spaces.
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Martina Polig, Despina G. Papacharalambous, Nikolas Bakirtzis, and Sorin Hermon. 2021. Assessing Visual Perception in Heritage Sites with Visual Acuity: Case study of the Cathedral of St. John the Theologian in Nicosia, Cyprus. J. Comput. Cult. Herit. 14, 1, Article 1 (February 2021), 18 pages. DOI:https://doi-org.umasslowell.idm.oclc.org/10.1145/3417710
+\end{thebibliography}
+\end{document}

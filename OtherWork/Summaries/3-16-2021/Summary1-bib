@@ -1,0 +1,42 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 3/16/2021
+% Summary 1 
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 1}
+\author{Joshua Shilts}
+\date{March 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+In this article i found their approach to solve adverse effects from drug interactions very interesting. They, researchers at the University of Kentucky are using deep learning in conjunction with sequential and graph based context where the graphs are utilized in dependency parse trees. The whole point of this in short is to develop a system that lower the adverse affects from drug to drug interaction that causing many hospitalizations and fatalities per year.I think this is a relevant topic because there researchers are developing a new tool that can and will one day be used across all devices available including mobile ones. This tool will be utilized to help save people lives and improve them in a positive way. The way these tool are being utilized as well gives some interesting context to other topics in school that I have learned, such as parse trees, and how these tools are applied in different ways outside the academic world.
+
+\section{Abstract}
+Preventable adverse events as a result of medical errors present a growing concern in the healthcare system. As drug-drug
+interactions (DDIs) may lead to preventable adverse events, being able to extract DDIs from drug labels into a machineprocessable form is an important step toward effective dissemination of drug safety information. Herein, we tackle the problem of jointly extracting mentions of drugs and their interactions, including interaction outcome, from drug labels. Our deep
+learning approach entails composing various intermediate representations, including graph-based context derived using
+graph convolutions (GCs) with a novel attention-based gating mechanism (holistically called GCA), which are combined in
+meaningful ways to predict on all subtasks jointly. Our model is trained and evaluated on the 2018 TAC DDI corpus. Our
+GCA model in conjunction with transfer learning performs at 39.20% F1 and 26.09% F1 on entity recognition (ER) and relation
+extraction (RE), respectively, on the first official test set and at 45.30% F1 and 27.87% F1 on ER and RE, respectively, on the
+second official test set. These updated results lead to improvements over our prior best by up to 6 absolute F1 points. After
+controlling for available training data, the proposed model exhibits state-of-the-art performance for this task.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Tung Tran, Ramakanth Kavuluru, and Halil Kilicoglu. 2020. Attention-Gated Graph Convolutions for Extracting Drug Interaction Information from Drug Labels. ACM Trans. Comput. Healthcare 2, 2, Article 10 (January 2021), 19 pages.
+https://doi.org/10.1145/3423209
+
+\end{thebibliography}
+\end{document}

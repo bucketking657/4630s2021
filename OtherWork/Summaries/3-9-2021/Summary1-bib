@@ -1,0 +1,46 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 3/8/2021
+% Summary 1 
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary of SSI's for Identities for Fighting Covid-19 Impact}
+\author{Joshua Shilts}
+\date{March 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+This article talked about using a block chain based Self-Sovereign Identity for undocumented workers to support them during the pandemic. I  thought it was interesting because undocumented workers make up a large percentage of our essential worker work force the example provided in the article was in the agricultural sector. However due to them being undocumented a lot of them will not report having symptoms or being sick and will still report to work causing community spread. This article stated that by using block chain applications undocumented migrants can have an identity and can seek services without endangering their privacy. This is relevant because is using contemporary computing technology in with both mobile and desktop ways of making claims that an agents can check out and verify their authenticity. This is a great secure way for someone to do some good for a community that usually has live in the shadows, where in the case of the pandemic works against our collective interest of see this, the pandemic, end. 
+
+\section{Abstract}
+Whereas part of the world can benefit from the wonders of digital technologies, undocumented migrants, asylum seekers,
+and refugees are facing the rough reality of being “invisible” in society and ignored by governments. During the COVID-19
+pandemic, the economic impact of the closure of the service industry and the impossibility to keep most of the informal
+work they perform place them into a limbo without income and unemployment benefits. They are denied formal support
+because of the lack of a legally recognized identity. For this type of humanitarian support, contemporary identities can offer
+a way out. Self-sovereign identities (SSI) can provide individuals ownership over their data and the ability to share this with
+others. The essence is that the owner determines whom they share their identity data with. They have the sole ownership
+of the identity data. As such, an SSI ensures privacy for undocumented persons. This would allow to provide support to
+those who are left behind by a lack of formal identity. In this article, we explore the possibility of SSI to assist undocumented
+individuals throughout the pandemic times. SSI can be used to interact with undocumented workers and to share all kinds
+of identity data, such as sharing the attestation of COVID-19 tests or the ability to donate money to those who are illegal
+without sacrificing their identity.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Rachel Benchaya Gans, Jolien Ubacht, and Marijn Janssen. 2020. Self-sovereign Identities for Fighting the Impact of COVID-19
+Pandemic. Digit. Gov.: Res. Pract. 2, 2, Article 16 (December 2020), 4 pages.
+https://doi.org/10.1145/3429629
+
+\end{thebibliography}
+\end{document}

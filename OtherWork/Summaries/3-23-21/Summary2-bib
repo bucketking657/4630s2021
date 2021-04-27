@@ -1,0 +1,38 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 3/23/2021
+% Summary 2
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 2}
+\author{Joshua Shilts}
+\date{March 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+In this article researchers are trying to establish and then test a series of rules for making visual data for tracking fire more accurate. I find this interesting because I grew up in southern California where fires were quite common and I was curious know how they could always come up with these calculations and track the growth of the fires. It was interesting to learn that they use polygon shapes  and drones now that record the fire at 25 frames per second. The researchers then use this spatial data to compute the change of the fire over time. This is a relevant topic because a lot of computing work is taking data that already exist and trying to do something new with it. In this article I found not only the work they were doing interesting but the process oh ho0w they were doing it. For example they executed their refined method then visually went through and check their calculations to ensure that everything was working correctly and when it wasn't they made adjustments. I feel this is a good example of what to expect ion the work force when I leave school which is another way it was relevant and interesting.
+
+\section{Abstract}
+Spatio-temporal data can be used to study and simulate the movement and behavior of objects and natural
+phenomena. However, the use of real-world data raises several challenges related to its acquisition, representation, and quality. This article presents a data cleaning process, based on consistency rules and checks, that uses geometric operations to detect and remove outliers or inaccurate data in a spatio-temporal series. The proposal consists of selecting key frames and applying the process iteratively until the data have the desired quality. The case study consists of extracting and cleaning spatio-temporal data from a video tracking the
+propagation of a controlled fire captured using drones. The source data was generated using segmentation techniques to obtain the regions representing the burned area across time. The main issues concern noisy data (e.g., the height of flames is highly variable) and occlusion due to smoke. The results show that the quality assessment and improvement method proposed in this work can identify and remove inconsistencies from a dataset of more than 22,500 polygons in just a few iterations. The quality of the corrected dataset is verified using metrics and graph analysis.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Rogério Luís C. Costa, Enrico Miranda, Paulo Dias, and José Moreira. 2021. Experience: Quality Assessment
+and Improvement on a Forest Fire Dataset. J. Data and Information Quality 13, 1, Article 5 (January 2021), 13
+pages.
+https://doi.org/10.1145/3428155
+
+\end{thebibliography}
+\end{document}

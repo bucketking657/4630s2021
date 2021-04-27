@@ -1,0 +1,32 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 2/16/2021
+% Summary 2 
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary on Boeing Software Failures}
+\author{Joshua Shilts}
+\date{February 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+IN this study the authors investigated how the standard for low intensity focused ultrasound is not what defines sensation but is parameter of the sensation. This was interesting to me because this is the first study I have read that contradict some of its cited material. I know that this happens a lot in the scientific field but this is the first I have come across it. This is relevant to our field because if this technology is further it will provide a whole new dimension to simulations. One example that i can think of is flight simulation where now a pilot can be trained to the now just to fly the aircraft but to the feel of it as well. It is something i experience when I was younger in my twenties running a piece of equipment specifically an excavator. There is a feel when you dig a bucket in the ground where you can tell if you hit rock, cement, pipes, or just plain undisturbed dirt.IF this technology progress it will open a whole new dimension to simulation that we as developers are going to be responsible for understanding and implementing.
+
+\section{Abstract}
+Tactile threshold of low-intensity focused ultrasound (LIFU) haptic devices has been defined as the minimum pressure required for tactile sensation. However, in contact-type LIFU haptic devices using an elastomer as a conductive medium, the tactile threshold is affected by the mechanical properties of the elastomer. Therefore, the tactile threshold needs to be redefined as a parameter that does not change with the mechanical properties of the elastomer. In this study, we used the LIFU haptic device to investigate the displacement of the elastomer surface at the tactile threshold while controlling the pulse duration, pulse repetition frequency, and pressure. We analyzed the displacement magnitude and rate to determine their relationship to the pressure. The displacement magnitude is the spatiotemporal peak of the displacement, and the displacement rate is the initial slope of the displacement at the starting point of LIFU pulse. The tactile threshold measured by the applied pressure showed the U-shaped graph, and the minimum pressure of 475 kPa at 2 ms and 407 kPa at 300 Hz was measured. The tactile threshold measured by the displacement show that the tactile sensation can be evoked at the small displacement magnitude (<3 um) when the high displacement rate is present (>1.56 mm/s). Furthermore, the large displacement magnitude is required to induce the tactile sensation when the displacement rate is low. This result shows that the tactile threshold of a contact-type LIFU haptic device is affected by both the displacement magnitude and rate of the conductive medium. Our findings can be used as a guideline for developing a contact-type LIFU haptic device regardless of the elastomer used.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1} 
+Jeongbong Choi, Soonhyun Yook, In Young Kim, Mok Kun Jeong, and Dong Pyo Jang. 2021. Quantification of Displacement for Tactile Sensation in a Contact-type Low Intensity Focused Ultrasound Haptic Device. ACM Trans. Appl. Percept. 18, 1, Article 1 (January 2021), 8 pages. DOI:https://doi-org.umasslowell.idm.oclc.org/10.1145/3422820
+\end{thebibliography}
+\end{document}

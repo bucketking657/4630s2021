@@ -1,0 +1,35 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 3/2/2021
+% Summary 2 
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary of Rare 'locked' letters
+Diagnosis}
+\author{Joshua Shilts}
+\date{March 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+This was an interesting article because it combines my two favorite topics history and Computer science. A trunk containing 577 locked letters were found from the 17 century that could not be open because of how fragile they were. So scientist used an x-ray scanner and a computer algorithm to virtually unfold one of these letters. This is another way that computer science can help unlock the mysteries of the past in an invasive way. I think this is relevant because it show a new and interesting way that computers and computer algorithm are be coming crucial tools to aid researchers in other professions that have not yet seen or utilized the advantages that computer science has to offer. This new technique is something that has a lot of potential in the field of archaeology and I feel it will become a widely sought after tool to observe historical documents that are incredibly fragile.
+
+\section{Abstract}
+No abstract for this article
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Katie Hunt 2020. Rare 'locked' letter sealed 300 years ago is finally opened virtually
+https://www.cnn.com/style/article/opening-sealed-letters-study-scn/index.html
+
+\end{thebibliography}
+\end{document}

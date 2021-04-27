@@ -1,0 +1,34 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 4/13/2021
+% Summary 2
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 2}
+\author{Joshua Shilts}
+\date{April 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+This article talks about the problem of how some facial recognition software is programmed to sometimes not pick up certain people because of their skin tone. The article talks about how Facebook released a data set called casual conversations to help developers to track people of different skin tones. I thought this was interesting I have heard in the news before that some applications struggled with people who had a darker skin tone. This is not good because it is not inclusive to other people and it shows that your programmers did not test this thoroughly enough. I thought it was relevant because any time you create something that utilizes people's faces you should always implement your application in a way that is inclusive. This should be done not only for ethical reasons but for monetary reasons as well. If your app can serve all people then you have the most customer data which you can then sell to advertisers. This is a big-time goal for social media developers and companies which is why it is no surprise that Facebook was developing this new dataset.
+
+\section{Abstract}
+no abstract for this article
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Tekla S. Perry 08 Apr 2021 
+Are AI Algorithms Playing Fairly with Age, Gender, and Skin Color?
+https://spectrum.ieee.org/view-from-the-valley/artificial-intelligence/machine-learning/are-ai-algorithms-playing-fairly-with-age-gender-and-skin-color
+\end{thebibliography}
+\end{document}

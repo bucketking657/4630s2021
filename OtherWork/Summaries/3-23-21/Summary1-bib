@@ -1,0 +1,36 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 3/23/2021
+% Summary 1
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 1}
+\author{Joshua Shilts}
+\date{March 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+This article conducts research on cultures outside the US and what those cultures expects the role for robots to play in the future. I find this interesting because firstly it a question I have never asked myself and secondly it delves into the expectations of cultures that are not familiar to me. What I found interesting is that middle eastern cultures and European cultures have very different expectations for the roles that social robots will have and how they will interact with humans. I find this article relevant because robot comprise a vast amount of computer programming and other disciplines of engineering, and even speculate that at some point these robots might be managed or controlled from a mobile device. In the future I believe that mobile computing and robots are going to have a huge amount of overlap due to the fact that their are more people with phones then computers and almost everyone knows how to use a phone. This will make  controlling and configuring the robot much easy since these device are already widely available to almost all users across the globe.
+
+\section{Abstract}
+This article presents a study of cultural differences affecting the acceptance and design preferences of social robots. Based on a survey with 794 participants from Germany and the three Arab countries of Egypt, Jordan, and Saudi Arabia, we discuss how culture influences the preferences for certain attributes. We look at social roles, abilities and appearance, emotional awareness and interactivity of social robots, as well as the attitude toward automation. Preferences were found to differ not only across cultures, but also within countries with similar cultural backgrounds. Our findings also show a nuanced picture of the impact of previously identified culturally variable factors, such as attitudes toward traditions and innovations. While the participants’ perspectives toward traditions and innovations varied, these factors did not fully account for the cultural variations in their perceptions of social robots. In conclusion, we believe that more real-life practices emerging from the situated use of robots should be investigated. Besides focusing on the impact of broader cultural values such as those associated with religion and traditions, future studies should examine how users interact, or avoid interaction, with robots within specific contexts of use.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Oliver Korn, Neziha Akalin, and Ruben Gouveia. 2021. Understanding Cultural Preferences for Social Robots:
+A Study in German and Arab Communities. ACM Trans. Hum.-Robot Interact. 10, 2, Article 12 (March 2021),
+19 pages.
+https://doi.org/10.1145/3439717
+
+\end{thebibliography}
+\end{document}

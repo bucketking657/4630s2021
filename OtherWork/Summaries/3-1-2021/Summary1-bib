@@ -1,0 +1,36 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 3/1/2021
+% Summary 1 
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary of The Situated, Relational, and Evolving Nature of Epilepsy
+Diagnosis}
+\author{Joshua Shilts}
+\date{March 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+In this article I thought it was really interesting approach to how we currently look at medical diagnose for seizures, what is wrong with it and how we can do it better.It was interesting because I work for a medical company and this analysis show how intelligent support decisions can help patients by improving the quality of their care with more accurate diagnose and improved symptoms tracking over time. One idea I really like was diagnostic revisions not being tracked and how interpretations of older data can reshape our understanding. This article is relevant because it talks about incorporating AI and machine learning in form of clinical decisions support systems that assist doctors in diagnosing patients. This field has been slow to be incorporated into the medical field due to a lack of trust in the systems. However some doctors are open to utilizing these machines as long as there is a explanation provided by the machine that shows how and why it arrived at its conclusions.
+
+\section{Abstract}
+An understanding of medical diagnosis as it is practiced is essential for those seeking to support it using intelligent systems. Through the case of epilepsy, we show that diagnosis is a situated, relational, and evolving process that accounts for information well beyond the patient’s physiology, even for physiological phenomena like seizures. Through observations and interviews with neurologists, we show that the meaning of brainwaves and other physiological data depends upon a range of patient-specific and contextual factors, such as age, comorbidities, and mealtimes. Further, we show that diagnosis is partly determined by social factors such as the activities of caregivers and other clinicians, and environmental factors such as faulty electrical wiring. Additionally, diagnostic classifications can evolve in response to new information: events that were once
+considered seizures can be reinterpreted as clinically irrelevant and vice versa. We contribute a broader sociotechnical perspective to literature on intelligent decision making in healthcare and discuss implications for the design of decision support systems that can better support the work of medical diagnosis.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Megh Marathe and Kentaro Toyama. 2020. The Situated, Relational, and Evolving Nature of Epilepsy Diagnosis.
+Proc. ACM Hum.-Comput. Interact. 4, CSCW3, Article 217 (December 2020), 18 pages. https://doi.org/10.1145/
+3432916
+\end{thebibliography}
+\end{document}

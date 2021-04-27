@@ -1,0 +1,32 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 2/16/2021
+% Summary 1 
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary on Boeing Software Failures}
+\author{Joshua Shilts}
+\date{February 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+The article I read called Invisible COVID-19 business risk, in which deals with the situation where small and medium size business have become easy targets for cyber criminals because they have been forced to conduct their business via the web. The article also goes on to say that they are not many business solutions out they that are catered to small and medium size business, and due to this they make easier targets for cyber criminals who exploit these weaknesses through debilitating software, impersonation, and data breaches. The authors go on to claim that the best solution to mitigate these kinds of attacks is to prevent them instead of seeking prosecution. I feel this is relevant because a lot of business that I have worked for and am currently working for do not have an in-house IT department that is adequately trained to deal with these kinds of threats. Also, at my internship where we are a small company of about 50 people suffered a ransomware attack last year where we were attacked through an unsecured UDP port.  The IT department relies on outside contractors to maintain our security, but we also utilized firewalls software and other tech that was 20 years old and years out of date. 
+
+\section{Abstract}
+COVID-19 forced small businesses globally to move their presence online to survive. Cyber-criminals have swiftly taken advantage of the chaos wrought by this move. Due to factors ranging from small businesses’ inexperience with technology to a global cyber-security skill shortage, policy-based solutions by governments are needed to help ensure that this vital sector in global economies does not fall victim to cyber-criminals. We propose and discuss three measures that governments can take to build up small business cyber-security resilience.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1} 
+Tracy Tam, Asha Rao, and Joanne Hall. 2021. The Invisible COVID-19 Small Business Risks: Dealing with the Cyber-Security Aftermath. Digit. Gov.: Res. Pract. 2, 2, Article 23 (January 2021), 8 pages. DOI:https://doi-org.umasslowell.idm.oclc.org/10.1145/3436807
+\end{thebibliography}
+\end{document}

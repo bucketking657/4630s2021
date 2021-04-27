@@ -1,0 +1,33 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 2/22/2021
+% Summary 1
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary Perservernce Helicopter on Mars}
+\author{Joshua Shilts}
+\date{February 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+This week I read an article about how the helicopter Perseverance on the new mars rover that just landed is using automation to plan its flights. I found this interesting because scientist are not only attempting flight on a different planet for the first time they are also using automation. It is not complete autonomous flight but what they do is lay a course out for the helicopter and have it fly and as it flies on this pre-flight trajectory it makes adjustment based on wind gust so it can execute its pre-planned trajectory. I think this i relevant because software is being utilized to make those complex adjustments to Perseverance's flight paths and this is just a mere stepping stone for AI drones that will one day hopefully be used to explore other planets that are far to hostile to human life for us to explore. It definitely opens up a new chapter in human exploration.
+
+\section{Abstract}
+No abstract for this article
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Evan Ackerman
+How NASA Designed a Helicopter That Could Fly Autonomously on Mars 17 Feb 2021 https://spectrum.ieee.org/
+https://spectrum.ieee.org/automaton/aerospace/robotic-exploration/nasa-designed-perseverance-helicopter-rover-fly-autonomously-mars
+\end{thebibliograp

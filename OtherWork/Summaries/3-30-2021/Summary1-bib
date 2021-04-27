@@ -1,0 +1,34 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 3/30/2021
+% Summary 1
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 1}
+\author{Joshua Shilts}
+\date{March 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+This article talk about research done at the University of Glasgow in the Bendable electronic and sensing Technologies group. I found this article interesting because this group created a bandage that connects to a mobile app who primary function is to help wounds heal better. However this app can also be used to detect coranaviris symptoms since it is able to detect blood oxygen levels and a person temperate and remote notify their physician. This is relevant to us because this is a great way of how technology,specifically mobile computing is being used to help improve people lives. Also it show how mobile computing is entering, even more so, into the medical field and is being used with other medical devices to keep track of patients health and keep their doctors informed. I really like how this one application and device have so many other potential uses for a patient i think we are going to see a lot more advances like this in health field for mobile computing in the coming years.
+
+\section{Abstract}
+No abstract for this Article
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Katy Pret. Mar 29 2021. This Smart Bandage Could Hasten Healing and Might Even Detect COVID
+https://spectrum.ieee.org/the-institute/ieee-member-news/this-smart-bandage-could-hasten-healing-and-might-even-detect-covid
+
+\end{thebibliography}
+\end{document}

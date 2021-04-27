@@ -1,0 +1,33 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 4/4/2021
+% Summary 1
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 1}
+\author{Joshua Shilts}
+\date{April 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+This article talk about a new app coming out called greaseDroid that mitigates the effects of the dark pattern user experience. The dark pattern experience is something that programmer as created to make apps more addictive or harder to sign out of. This is interesting because this article adds another technical layer onto the work that the Social Dilemma did, and shows that where may be some solution for users who suffer from this. This is an important relevant topic because everyone uses these mobile applications and in effect is subject to these dark pattern UX methodologies, and it is something that we have been aware but unable to effectively combat. Now when this app is released it provides users a way to strip the manipulative tools created by developers to make apps less addictive and easier to leave.
+
+\section{Abstract}
+No abstract for this Article
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Edd Gent. New Tool Strips Manipulative "Dark Patterns" From Mobile Apps. 
+https://spectrum.ieee.org/tech-talk/computing/software/new-tool-strips-manipulative-dark-patterns-from-mobile-apps
+\end{thebibliography}
+\end{document}

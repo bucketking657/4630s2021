@@ -1,0 +1,52 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 2/2/2021
+% Summary 1 
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Direct Seamless Parametrization Summary}
+\author{Author:ZOHAR LEVI}
+\date{January 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+
+\section{Summary}
+
+The article I chose dealt with surface parametrization and a new method for seamless surface parametrization. The formal definition of this put simply is that for every pair of mated points the transition is rigid[1]. The article laid out related contemporary work being done in this field by other researchers and stating that seamless parameterization with low isometric distortion is done in two steps. First, the construct the field and then optimize the layout to the chosen parameters. This a further laid out through the main algorithm whose one loop contains the initialization, the rounding step, and layout optimization. The article then goes through several other algorithm’s labels 2 and 4 that deal with further refine and optimize the alignment of the vectors and edges. One area of the article that bothered me was that in the evaluation section they only tested their work with a small data set of 15 challenging benchmarks, which I feel was inadequate to give the reader a full understanding of the veracity of their data. If the tests performed on the data are sufficient then the results given in Tables 1 and 2 display[2,3] an impressive level of precision using this new optimized method for seamless surface parameterization. 
+
+
+\section{Abstract}
+We present a method for seamless surface parametrization. Recent popular methods first generate a cross-field, where curvature is concentrated at singular vertices. Next, in a separate step, the surface is laid out in the domain subject to derived seamlessness constraints. This decoupling of the process into two independent problems, each with its own objective, leads to suboptimal results. In contrast, our method solves both problems together using domain variables.
+
+The key ingredient to the robustness of our method is a rounding strategy based on local estimation. The insight is that testing a small patch to decide between two likely possibilities is a good estimator.
+
+Most distortion measures can be used with our method, which get minimized consistently throughout the pipeline. Our method also enables feature alignment, as well as alignment to principle curvatures, and isotropic and anisotropic scaling.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Seamless Parametrization Defination} 
+Zohar Levi. 2021. Direct Seamless Parametrization. ACM Trans. Graph. 40,
+1, Article 6 (January 2021), 14 pages.
+\\https://doi.org/10.1145/3439828
+
+\bibitem{Table 1} 
+ 
+\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German) [\textit{On the electrodynamics of moving bodies}]. 
+Annalen der Physik, 322(10):891–921, 1905.
+
+\bibitem{Table 2} 
+Jin Huang, Muyang Zhang, Jin Ma, Xinguo Liu, Leif Kobbelt, and Hujun Bao. 2008.
+Spectral quadrangulation with orientation and alignment control. ACM Trans.
+Graph. 27, 5, Article 147 (Dec. 2008), 9 pages.
+\end{thebibliography}
+
+\end{document}

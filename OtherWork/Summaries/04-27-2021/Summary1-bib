@@ -1,0 +1,34 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 4/27/2021
+% Summary 1
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 1}
+\author{Joshua Shilts}
+\date{April 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+In this article the author talks about how researchers are using classically entangled light to try and establish a bridge between quantum computers and classical computers. This article was interesting because the researchers suggest instead of using delicate quantum bits that can disappear if they warm up beyond absolute zero, to use light particles that are easier to handle.  This would allow the, to replace some quantum processes in high dimensions which were not possible before. This is relevant to use because quantum computing is something that is going to change the industry that I have studied to be a part of as well as the world. As we move close and close to finding viable means of implementing this emerging technology it is important to know how they are doing to ensure that I have the knowledge to continue to make myself useful within the work force.
+
+\section{Abstract}
+No abstract for this article
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Neil Savage. 27 Apr 2021 How Close Is Ordinary Light To Doing Quantum Computing?
+https://spectrum.ieee.org/tech-talk/computing/hardware/could-ordinary-light-do-quantum-computing
+
+\end{thebibliography}
+\end{document}

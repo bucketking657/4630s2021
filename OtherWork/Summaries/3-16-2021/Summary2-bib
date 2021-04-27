@@ -1,0 +1,53 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 3/16/2021
+% Summary 2 
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 2}
+\author{Joshua Shilts}
+\date{March 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+In this article researchers focus on ways to digitize and structure archaeological data so that the community of researchers can more easily access it. I found this interesting because this is where computing is being used to make data more available and structured so more people can analysis it. Doing this will bring new insights in both the fields of archaeology and the field of computing where the data must be structured in a way that assist other researchers who are not engineer or computer scientist. I think this is a relevant topic for computing because structuring data is a big part of the field of computation and making more data available for researchers is an example how computing can help improve the world. I think by making data like this more available will bring new insights to our past and even computing methodologies as we, computer scientist look to make our insights available in a way that makes sense and assist in other fields of research.
+
+\section{Abstract}
+It has become almost standard practice that archaeological research on cemeteries is published in a similar fashion, specifically
+when primary sources supplement the data presented. Aside from the interpretative part, a catalog of all graves, buried
+individuals, and finds is published along with a map of the site and graphical depictions of the various entities. This is mostly
+structured within a four-level hierarchy beginning with the cemetery, the contained graves, the burials from each grave, and
+the finds associated with the burial. Today, even though many publications and their catalogs are based on or derived from
+digital data and published as open access, the outcome is often printed text such as a pdf file. Digital data that is properly
+structured and can be used out of the box for further analyses is rarely available.
+The presented article discusses how to digitize data on burials and how to provide them to the public in sustainable and
+comprehensible ways.
+Within previous and ongoing projects, the author and his team have developed a database system (OpenAtlas) that is used
+for the data acquisition of archaeological and anthropological research data that also maps information directly to the CIDOC
+CRM. Temporal and spatial fuzziness are dealt with following various concepts such as GeoJSON-T. For providing the data
+as Linked Open Data, the “linked places” format is used and an API provides a JSON-LD representation of each entity.
+Due to the “standard” approach implemented when publishing cemeteries, the data acquisition is mostly achieved by
+manually recording the published information in the database.
+In the following projects, data from several hundred Early Medieval Austrian and Czech burial sites with several thousand
+graves and finds have been digitized. To publicize the information, an online web application (https://thanados.net) has been
+developed to present and disseminate this data.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+ACM Reference format:
+Stefan Eichert. 2020. Digital Mapping of Medieval Cemeteries: Case Studies from Austria and Czechia. J. Comput. Cult. Herit.
+14, 1, Article 3 (December 2020), 15 pages.
+https://doi.org/10.1145/3406535
+
+\end{thebibliography}
+\end{document}

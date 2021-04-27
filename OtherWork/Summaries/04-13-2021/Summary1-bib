@@ -1,0 +1,34 @@
+% Joshua Shilts
+% Mobile App Dev II
+% 4/13/2021
+% Summary 1
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[nottoc]{tocbibind} %Adds "References" to the table of contents
+
+%Document title, author and date (empty)
+\title{Summary 1}
+\author{Joshua Shilts}
+\date{April 2021}
+
+%Beginning of the document
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+In this article, researchers discuss how machine learning can transform the field of epidemiology while presenting considerations for others who want to Utilize machine learning. One thing I found interesting was how researchers are using machine learning to identify areas with a higher likelihood of zoonotic diseases. I also found it interesting how they discuss how it is important for others to have access to accurate data regarding the target or outcome of interest. This is relevant because machine learning has had a problem in healthcare with problems related to the ability to reproduce results from another study. If researchers shared this data it would significantly advance machine learning potentially even leading to a developed standard of how data should be structured.
+
+\section{Abstract}
+The increasing availability of electronic health data presents a major opportunity in healthcare for both discovery and practical applications to improve healthcare. However, for healthcare epidemiologists to best use these data, computational techniques that can handle large complex datasets are required. Machine learning (ML), the study of tools and methods for identifying patterns in data, can help. The appropriate application of ML to these data promises to transform patient risk stratification broadly in the field of medicine and especially in infectious diseases. This, in turn, could lead to targeted interventions that reduce the spread of healthcare-associated pathogens. In this review, we begin with an introduction to the basics of ML. We then move on to discuss how ML can transform healthcare epidemiology, providing examples of successful applications. Finally, we present special considerations for those healthcare epidemiologists who want to use and apply ML.
+
+%Bibliographic references
+\begin{thebibliography}{9}
+\bibitem{Article cited 1}
+Jenna Wiens, Erica S Shenoy
+Clinical Infectious Diseases, Volume 66, Issue 1, 1 January 2018, Pages 149–153, https://doi.org/10.1093/cid/cix731
+Published: 21 August 2017
+\end{thebibliography}
+\end{document}

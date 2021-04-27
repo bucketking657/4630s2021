@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/farmer_List_business_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:textSize="24sp"
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/farmer_list_address"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:textSize="18sp"
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/_farmer_list_city"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:textSize="18sp"
+        android:textColor="@color/white" />
+</LinearLayout>

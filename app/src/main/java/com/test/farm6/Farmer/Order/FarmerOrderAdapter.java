@@ -1,4 +1,4 @@
-package com.test.farm6.Farmer;
+package com.test.farm6.Farmer.Order;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,8 +29,8 @@ public class FarmerOrderAdapter extends RecyclerView.Adapter<FarmerOrderAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.orderNumber.setText("Order Number: " + (1+list.get(position).getPositionNumber(position)));
-        holder.orderStatus.setText(list.get(position).getOrderStatus());
+        holder.orderNumber.setText("Order Number: " + (position +1));
+        holder.orderStatus.setText(list.get(position).getStatus());
         holder.orderNumber.setOnClickListener(v -> listener.onItemClick(position));
         holder.orderStatus.setOnClickListener(v -> listener.onItemClick(position));
     }

@@ -12,14 +12,12 @@ import com.test.farm6.model.OrderLine;
 import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder> {
-
     private List<OrderLine> list;
     private EditItemClickListener listener;
     public CartAdapter (List<OrderLine> list, EditItemClickListener listener ){
         this.list = list;
         this.listener = listener;
     }
-
 
     @NonNull
     @Override

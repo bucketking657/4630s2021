@@ -3,19 +3,17 @@ package com.test.farm6.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.Objects;
+
 public class User implements Parcelable {
 
-    private String id;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String password;
+    protected String id;
+    protected String firstName;
+    protected String lastName;
+    protected String email;
+    protected String password;
 
     public User() {
-        firstName = "";
-        lastName = "";
-        email = "";
-        password = "";
     }
 
     public User(String firstName, String lastName, String email, String password) {
@@ -31,6 +29,18 @@ public class User implements Parcelable {
         lastName = in.readString();
         email = in.readString();
     }
+
+    public static final Creator<User> CREATOR = new Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 
     public String getEmail() {
         return email;
@@ -92,4 +102,26 @@ public class User implements Parcelable {
         dest.writeString(lastName);
         dest.writeString(email);
     }
+
+    public User basicUser() {
+        User user = new User();
+        user.setId(this.id);
+        user.setFirstName(this.firstName);
+        user.setLastName(this.lastName);
+        return user;
+    }
+
+    public String getFullName(){
+        return firstName + " " + lastName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id.equals(user.id);
+    }
+
+
 }

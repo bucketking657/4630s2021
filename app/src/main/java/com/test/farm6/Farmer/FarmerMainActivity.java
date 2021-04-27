@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
+import com.test.farm6.Farmer.Order.FarmerOrderListActivity;
+import com.test.farm6.Farmer.Stock.FarmerStockUpdateChoiceActivity;
 import com.test.farm6.R;
 
 public class FarmerMainActivity extends AppCompatActivity {
@@ -27,8 +30,7 @@ public class FarmerMainActivity extends AppCompatActivity {
     }
 
     private void launchActivity () {
-        Intent intent = new Intent(this, FarmerOrderList.class);
+        Intent intent = new Intent(this, FarmerOrderListActivity.class);
         startActivity(intent);
     }
-
 }

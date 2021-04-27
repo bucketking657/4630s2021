@@ -14,18 +14,14 @@ public class Farmer extends User  {
     private String address;
     private String city;
     private String businessName;
-    private Map<String,Stock> Stock;
+    private Map<String,Stock> Stock = new HashMap<>();
 
     public Farmer(){
         super();
-        this.address = "";
-        this.city ="";
-        this.businessName = "";
     }
 
     public Farmer(String first_name, String last_name, String email, String password, String address, String city, String businessName){
         super(first_name, last_name, email, password);
-
         this.address = address;
         this.city = city;
         this.businessName = businessName;
@@ -51,11 +47,16 @@ public class Farmer extends User  {
         dest.writeString(address);
         dest.writeString(city);
         dest.writeString(businessName);
-        dest.writeInt(Stock.size());
-        for(Map.Entry<String,Stock> entry : Stock.entrySet()){
-            dest.writeString(entry.getKey());
-            dest.writeParcelable(entry.getValue(),0);
+        if (Stock != null) {
+            dest.writeInt(Stock.size());
+            for (Map.Entry<String, Stock> entry : Stock.entrySet()) {
+                dest.writeString(entry.getKey());
+                dest.writeParcelable(entry.getValue(), 0);
+            }
+        }else{
+            dest.writeInt(0);
         }
+
     }
 
     @Override
@@ -99,11 +100,23 @@ public class Farmer extends User  {
         this.businessName = businessName;
     }
 
-    public Map<String, com.test.farm6.model.Stock> getStock() {
+    public Map<String, Stock> getStock() {
         return Stock;
     }
 
     public void setStock(Map<String, com.test.farm6.model.Stock> stock) {
         Stock = stock;
     }
+    public Stock getStockItem(int i ){
+        return Stock.get(i);
+    }
+
+    public Farmer basicFarmer() {
+        Farmer farmer = new Farmer();
+        farmer.setId(this.id);
+        farmer.setFirstName(this.firstName);
+        farmer.setLastName(this.lastName);
+        return farmer;
+    }
+
 }

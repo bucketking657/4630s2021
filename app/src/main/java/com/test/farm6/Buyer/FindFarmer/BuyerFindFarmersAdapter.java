@@ -1,4 +1,4 @@
-package com.test.farm6.Buyer;
+package com.test.farm6.Buyer.FindFarmer;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +34,7 @@ public class BuyerFindFarmersAdapter extends RecyclerView.Adapter<BuyerFindFarme
     public void onBindViewHolder(@NonNull FindFarmerViewHolder holder, int position) {
         holder.business_name.setText(list.get(position).getBusinessName());
         holder.address.setText(list.get(position).getAddress());
+        holder.city.setText(list.get(position).getCity());
     }
 
     @Override
@@ -44,12 +45,14 @@ public class BuyerFindFarmersAdapter extends RecyclerView.Adapter<BuyerFindFarme
     public class FindFarmerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView business_name;
         TextView address;
+        TextView city;
         FindFarmerClickListener listener;
 
         public FindFarmerViewHolder(@NonNull View itemView, FindFarmerClickListener listener) {
             super(itemView);
             business_name = itemView.findViewById(R.id.find_farmer_List_business_name);
             address = itemView.findViewById(R.id.find_farmer_list_address);
+            city = itemView.findViewById(R.id.find_farmer_list_city);
             itemView.setOnClickListener(this);
             this.listener = listener;
         }

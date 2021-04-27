@@ -72,7 +72,6 @@ public class RegisterSellerActivity extends AppCompatActivity {
                     return;
                 }
 
-                //user Registerd here
                 fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -89,27 +88,7 @@ public class RegisterSellerActivity extends AppCompatActivity {
                             farmer.setEmail(email);
                             farmer.setPassword(password);
 
-
                             app.getDao().saveFarmer(farmer,userid);
-
-                        /*    DocumentReference docRef = fstore.collection("Seller").document(userid);
-                            Map<String, Object> seller = new HashMap<>();
-
-                            seller.put("fname",firstName);
-                            seller.put("lname",lastname);
-                            seller.put("email",email);
-                            seller.put("password",password);
-                            seller.put("address",address);
-                            seller.put("Busniess Name",businessName);
-
-                            docRef.set(seller).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-
-                                    Log.d("TAG","onSucess");
-
-                                }
-                            });*/
 
                             startActivity(new Intent(getApplicationContext(), FarmerMainActivity.class));
                         } else {

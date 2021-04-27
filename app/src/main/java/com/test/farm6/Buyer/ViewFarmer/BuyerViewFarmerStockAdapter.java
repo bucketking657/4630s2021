@@ -1,4 +1,4 @@
-package com.test.farm6.Buyer;
+package com.test.farm6.Buyer.ViewFarmer;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,18 +8,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.test.farm6.Farmer.FarmerStockAdapter;
 import com.test.farm6.R;
 import com.test.farm6.model.Stock;
 
 import java.util.List;
 
 public class BuyerViewFarmerStockAdapter extends RecyclerView.Adapter<BuyerViewFarmerStockAdapter.MyViewHolder> {
-    private List<Stock> list;
+    private List<Stock> stockList;
     private ListItemClickListener listener;
 
-    public BuyerViewFarmerStockAdapter(List<Stock> list, ListItemClickListener listener){
-        this.list = list;
+    public BuyerViewFarmerStockAdapter(List<Stock> stockList, ListItemClickListener listener){
+        this.stockList = stockList;
         this.listener = listener;
     }
 
@@ -32,14 +31,14 @@ public class BuyerViewFarmerStockAdapter extends RecyclerView.Adapter<BuyerViewF
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.productName.setText(list.get(position).getProduct().getName());
-        holder.productPrice.setText(String.valueOf(list.get(position).getProduct().getPrice()));
-        holder.productQuantity.setText(""+list.get(position).getAmount());
+        holder.productName.setText(stockList.get(position).getProduct().getName());
+        holder.productPrice.setText("$ "+ String.format("%.2f", stockList.get(position).getProduct().getPrice()));
+        holder.productQuantity.setText(String.valueOf(stockList.get(position).getWeight()) + " lb");
     }
 
     @Override
     public int getItemCount() {
-        return list.size();
+        return stockList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -60,7 +59,7 @@ public class BuyerViewFarmerStockAdapter extends RecyclerView.Adapter<BuyerViewF
         @Override
         public void onClick(View v) {
             if(listener != null) {
-                listener.onItemClick(list.get(getAdapterPosition()));
+                listener.onItemClick(stockList.get(getAdapterPosition()));
             }
         }
     }

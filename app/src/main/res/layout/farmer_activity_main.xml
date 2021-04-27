@@ -6,37 +6,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Farmer.FarmerMainActivity"
-    android:background="@drawable/background_for_farmer">
+    android:background="@drawable/user_background">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_height="match_parent"
         android:layout_marginTop="32dp"
-        android:orientation="vertical"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:gravity="center"
+        android:orientation="vertical"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        >
 
         <Button
             android:id="@+id/View_Orders"
             android:layout_width="280dp"
             android:layout_height="48dp"
-            android:text="@string/Orders"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:text="@string/Orders" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="1" />
+           />
+
         <Button
             android:id="@+id/View_Stock"
             android:layout_width="280dp"
             android:layout_height="48dp"
-            android:text="@string/Stock"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:text="@string/Stock" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

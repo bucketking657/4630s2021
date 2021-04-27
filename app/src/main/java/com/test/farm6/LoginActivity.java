@@ -25,7 +25,6 @@ import com.test.farm6.model.User;
 import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
-
     private TextView titleTextView, registerTextView, forgetPassTextView;
     private TextInputLayout passwordEditText;
     private TextInputLayout emailEditText;
@@ -79,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
                 mAuth.signInWithEmailAndPassword(userEnteredName, userEnteredPword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        System.out.println("This is my flag: " + accountFlag.isChecked());
+
                         if (task.isSuccessful()) {
 
                             Toast.makeText(LoginActivity.this, "Log in Successful", Toast.LENGTH_SHORT).show();
@@ -89,6 +88,7 @@ public class LoginActivity extends AppCompatActivity {
                                     @Override
                                     public void farmerRetrieved(Farmer farmer) {
                                         farmApplication.setCurrentUser(farmer);
+
                                     }
                                 });
                                 startActivity(new Intent(getApplicationContext(), FarmerMainActivity.class));
@@ -109,6 +109,12 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        });
+        forgetPassTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            startActivity(new Intent(new Intent(getApplicationContext(),ForgotPasswordActivity.class)));
             }
         });
     }

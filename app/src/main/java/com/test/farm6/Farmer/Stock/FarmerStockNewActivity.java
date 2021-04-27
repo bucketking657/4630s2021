@@ -1,12 +1,17 @@
-package com.test.farm6.Farmer;
+package com.test.farm6.Farmer.Stock;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.test.farm6.Cart.CartActivity;
 import com.test.farm6.FarmApplication;
 import com.test.farm6.R;
 import com.test.farm6.model.Farmer;
@@ -39,12 +44,14 @@ public class FarmerStockNewActivity extends AppCompatActivity {
 
                 if(newProductName != null && newProductPrice != null && newProductQuantity !=null) {
                     gatherData();
-
-                    //add stock item to farmer stock
                     app.getDao().saveFarmerStock(newStock, app.getCurrentUser().getId());
-
-                    Intent intent = new Intent(FarmerStockNewActivity.this, FarmerStockListActivity.class);
+                    Intent intent = new Intent(FarmerStockNewActivity.this,FarmerStockListActivity.class);
+                    newStock.setId("sdjlfsljksd"+System.currentTimeMillis());
+                    ((Farmer)app.getCurrentUser()).getStock().put(newStock.getId(),newStock);
+                    intent.putExtra("stock",newStock);
+                    setResult(Activity.RESULT_OK,intent);
                     startActivity(intent);
+                    finish();
                 }
             }
         });
@@ -66,11 +73,13 @@ public class FarmerStockNewActivity extends AppCompatActivity {
 
     public void gatherData(){
         Product newProduct = new Product();
-        newProduct.setName(newProductName.getText().toString());
-        newProduct.setPrice(Double.parseDouble(newProductPrice.getText().toString()));
-        newStock = new Stock();
-        newStock.setProduct(newProduct);
-        newStock.setAmount(Integer.parseInt(newProductQuantity.getText().toString()));
-
+        if(!(newProductName.getText().toString().equals("") || newProductPrice.getText().toString().equals("") || newProductQuantity.getText().toString().equals("")) ) {
+            newProduct.setName(newProductName.getText().toString());
+            newProduct.setPrice(Double.parseDouble(newProductPrice.getText().toString()));
+            newStock = new Stock();
+            newStock.setProduct(newProduct);
+            newStock.setWeight(Double.parseDouble(newProductQuantity.getText().toString()));
+        }
+        Toast.makeText(FarmerStockNewActivity.this,"Your new Item has been added",Toast.LENGTH_LONG).show();
     }
 }

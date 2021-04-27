@@ -1,62 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/OrderDisplay"
-    >
+    android:id="@+id/OrderDisplay">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/Order_Display"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginLeft="162dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="191dp"
-        android:layout_marginRight="191dp"
-        android:textColor="@color/black"
+        android:id="@+id/order_name_textView"
+        android:text="Name Here"
         android:gravity="center"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/farmer_ViewOrderDisplayRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:scrollbars="vertical" />
 
     <TextView
         android:id="@+id/total"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginLeft="164dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="189dp"
-        android:layout_marginRight="189dp"
-
         android:textColor="@color/black"
         android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="total"/>
+
         app:layout_constraintTop_toBottomOf="@+id/Order_Display" />
 
-
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
     <Button
         android:id="@+id/Process"
-        android:layout_width="251dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="147dp"
-        android:layout_marginLeft="147dp"
-        android:layout_marginEnd="107dp"
-        android:layout_marginRight="107dp"
-        android:layout_marginBottom="64dp"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="8dp"
         android:orientation="vertical"
         android:text="@string/process_order_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.712"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        />
+
+    </LinearLayout>
+</ScrollView>

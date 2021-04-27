@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/farmstand"
+    android:background="@drawable/farmer_order_background"
+
 
     android:paddingBottom="60dp">
 

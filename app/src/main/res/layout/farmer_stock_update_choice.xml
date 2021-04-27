@@ -6,11 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Farmer.FarmerMainActivity"
-    android:background="@drawable/background_for_farmer">
+    android:background="@drawable/farmer_stock">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="32dp"
         android:orientation="vertical"
         android:gravity="center"
@@ -24,20 +24,22 @@
             android:layout_width="280dp"
             android:layout_height="48dp"
             android:text="@string/Update_Stock"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+         />
 
         <View
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="1" />
+             />
 
         <Button
             android:id="@+id/new_stock"
             android:layout_width="280dp"
             android:layout_height="48dp"
             android:text="@string/addItem"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

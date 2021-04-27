@@ -1,16 +1,16 @@
-package com.test.farm6.Buyer;
+package com.test.farm6.Buyer.MyFarmers;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.test.farm6.Buyer.ViewFarmer.BuyerViewFarmerStockListActivity;
 import com.test.farm6.FarmApplication;
 import com.test.farm6.FarmDAO;
-import com.test.farm6.Farmer.FarmerStockListActivity;
 import com.test.farm6.R;
 import com.test.farm6.model.Farmer;
 
@@ -23,34 +23,28 @@ public class BuyerMyFarmersListActivity extends AppCompatActivity implements Buy
     private FarmApplication farmApp;
     private BuyerMyFarmerAdapter adapter;
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.shoppingmenu,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buyer_my_farmers_list);
-        farmApp = (FarmApplication) getApplication();
-        myFarmerRecyclerView = (RecyclerView) findViewById(R.id.buyer_MyFarmerRecyclerView);
         setUp();
-
-
     }
 
     @Override
     public void onItemClick(Farmer farmer) {
-        //Must get farmer ID
-        //Then that farmers Stock
         Intent intent = new Intent(this, BuyerViewFarmerStockListActivity.class);
         intent.putExtra("selected_farmer", farmer);
         startActivity(intent);
     }
 
     private void setUp(){
+        farmApp = (FarmApplication) getApplication();
+        myFarmerRecyclerView = (RecyclerView) findViewById(R.id.buyer_MyFarmerRecyclerView);
         adapter = new BuyerMyFarmerAdapter(farmers, this);
         myFarmerRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL );
+        dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.divider));
+        myFarmerRecyclerView.addItemDecoration(dividerItemDecoration);
         myFarmerRecyclerView.setAdapter(adapter);
         farmApp.getDao().retrieveUserFarmers(farmApp.getCurrentUser().getId(), new FarmDAO.RetrieveFarmersHandler() {
             @Override
@@ -60,8 +54,5 @@ public class BuyerMyFarmersListActivity extends AppCompatActivity implements Buy
                 adapter.notifyDataSetChanged();
             }
         });
-
     }
-
-
 }

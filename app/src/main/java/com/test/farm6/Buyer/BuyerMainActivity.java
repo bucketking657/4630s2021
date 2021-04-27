@@ -2,41 +2,32 @@ package com.test.farm6.Buyer;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.test.farm6.Buyer.FindFarmer.BuyerFindFarmersListActivity;
+import com.test.farm6.Buyer.MyFarmers.BuyerMyFarmersListActivity;
+import com.test.farm6.Buyer.MyOrders.BuyerMyOrdersOrderListActivity;
 import com.test.farm6.R;
 
-public class BuyerMainActivity extends AppCompatActivity {
+public class BuyerMainActivity extends MenuActivity {
 
     private Button myOrders;
     private Button myFarmers;
     private Button findFarmers;
-    private Button currentOrder;
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.shoppingmenu,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
     @Override
-    protected void onCreate (Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buyer_activity_main);
-
         myOrders = (Button) findViewById(R.id.My_Orders);
         myFarmers = (Button) findViewById(R.id.my_Farmers);
         findFarmers = (Button) findViewById(R.id.find_farmers);
-        currentOrder = (Button) findViewById(R.id.current_orders);
 
         myOrders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(BuyerMainActivity.this, BuyerPlacedOrderListActivity.class);
+                Intent intent = new Intent(BuyerMainActivity.this, BuyerMyOrdersOrderListActivity.class);
                 startActivity(intent);
             }
         });
@@ -56,16 +47,6 @@ public class BuyerMainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        currentOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(BuyerMainActivity.this, BuyerCurrentOrderActivity.class);
-                startActivity(intent);
-            }
-        });
     }
-
-
 }
 

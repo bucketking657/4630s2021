@@ -4,15 +4,18 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Stock implements Parcelable {
+    private String id;
     private Product product;
-    private Integer amount;
+    private Double weight;
 
     public Stock() {
+        Product product = new Product();
     }
 
     public Stock(Parcel in) {
+        this.id = in.readString();
         this.product = in.readParcelable(Product.class.getClassLoader());
-        this.amount = in.readInt();
+        this.weight = in.readDouble();
     }
 
     public Product getProduct() {
@@ -23,12 +26,12 @@ public class Stock implements Parcelable {
         this.product = product;
     }
 
-    public Integer getAmount() {
-        return amount;
+    public Double getWeight() {
+        return weight;
     }
 
-    public void setAmount(Integer amount) {
-        this.amount = amount;
+    public void setWeight(Double weight) {
+        this.weight = weight;
     }
 
     @Override
@@ -48,11 +51,18 @@ public class Stock implements Parcelable {
         }
     };
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
         dest.writeParcelable(product,0);
-        dest.writeInt(amount);
-
+        dest.writeDouble(weight);
     }
 }

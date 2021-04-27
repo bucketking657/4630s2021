@@ -24,27 +24,26 @@
         <activity android:name=".RegisterSellerActivity"/>
         <activity android:name=".RegisterActivity"
                     android:exported="true"/>
-
+        <activity android:name=".ForgotPasswordActivity"/>
         //Farmer
         <activity android:name = ".Farmer.FarmerMainActivity"/>
-        <activity android:name = ".Farmer.FarmerOrderList"/>
-        <activity android:name = ".Farmer.FarmerOrderDisplayActivity"/>
-        <activity android:name = ".Farmer.FarmerStockListActivity"/>
-        <activity android:name = ".Farmer.FarmerStockUpdateChoiceActivity"/>
-        <activity android:name = ".Farmer.FarmerStockNewActivity"/>
-        <activity android:name = ".Farmer.FarmerStockDisplayActivity"/>
+        <activity android:name = ".Farmer.Order.FarmerOrderListActivity"/>
+        <activity android:name = ".Farmer.Order.FarmerOrderDisplayActivity"/>
+        <activity android:name = ".Farmer.Stock.FarmerStockListActivity"/>
+        <activity android:name = ".Farmer.Stock.FarmerStockUpdateChoiceActivity"/>
+        <activity android:name = ".Farmer.Stock.FarmerStockNewActivity"/>
+        <activity android:name = ".Farmer.Stock.FarmerStockDisplayActivity"/>
 
         //Buyer
         <activity android:name = ".Buyer.BuyerMainActivity"/>
-        <activity android:name = ".Buyer.BuyerMyFarmersListActivity"/>
-        <activity android:name = ".Buyer.BuyerCurrentOrderActivity"/>
-        <activity android:name = ".Buyer.BuyerFindFarmersListActivity"/>
-        <activity android:name = ".Buyer.BuyerFindFarmerDisplayActivity"/>
-        <activity android:name = ".Buyer.BuyerPlacedOrderListActivity"/>
-        <activity android:name = ".Buyer.BuyerPlacedOrderDisplayActivity"/>
-        <activity android:name = ".Buyer.BuyerViewFarmerStockListActivity"/>
-        <activity android:name = ".Buyer.BuyerViewFarmerStockDisplayActivity"/>
+        <activity android:name = ".Buyer.MyFarmers.BuyerMyFarmersListActivity"/>
+        <activity android:name = ".Buyer.FindFarmer.BuyerFindFarmersListActivity"/>
+        <activity android:name = ".Buyer.FindFarmer.BuyerFindFarmerDisplayActivity"/>
+        <activity android:name = ".Buyer.MyOrders.BuyerMyOrdersOrderListActivity"/>
+        <activity android:name = ".Buyer.MyOrders.BuyerMyOrdersDisplayActivity"/>
+        <activity android:name = ".Buyer.ViewFarmer.BuyerViewFarmerStockListActivity"/>
+        <activity android:name = ".Buyer.ViewFarmer.BuyerViewFarmerStockDisplayActivity"/>
+        <activity android:name = ".Cart.CartActivity" android:theme="@style/Theme.AppCompat.DayNight.Dialog"/>
 
     </application>
-
 </manifest>

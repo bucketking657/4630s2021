@@ -25,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:textColor="@color/white"
+
             android:text="@string/select"/>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -39,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:textSize="16sp"
-                android:text="js@gmail.com"
+                android:text="gb@gmail.com"
                 android:background="#fff"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -69,7 +70,7 @@
             android:textColor="@android:color/background_light"
             android:text="@string/login"
             android:id="@+id/View_Orders"
-            android:background="@color/purple_500"
+            app:backgroundTint = "@color/green"
             android:textSize="16sp"/>
 
         <LinearLayout

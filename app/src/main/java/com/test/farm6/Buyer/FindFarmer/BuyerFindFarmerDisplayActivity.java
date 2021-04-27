@@ -1,18 +1,19 @@
-package com.test.farm6.Buyer;
+package com.test.farm6.Buyer.FindFarmer;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
+
+import com.test.farm6.Buyer.MenuActivity;
+import com.test.farm6.Buyer.ViewFarmer.BuyerViewFarmerStockListActivity;
 import com.test.farm6.FarmApplication;
-import com.test.farm6.Farmer.FarmerStockListActivity;
+import com.test.farm6.Farmer.Stock.FarmerStockListActivity;
 import com.test.farm6.R;
 import com.test.farm6.model.Farmer;
 
-public class BuyerFindFarmerDisplayActivity extends AppCompatActivity {
+public class BuyerFindFarmerDisplayActivity extends MenuActivity {
     private TextView find_Farmer_business_name;
     private TextView find_Farmer_address;
     private TextView find_farmer_city;
@@ -20,11 +21,6 @@ public class BuyerFindFarmerDisplayActivity extends AppCompatActivity {
     private Button add_and_view;
     private Farmer farmer;
     private FarmApplication app;
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.shoppingmenu,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -58,7 +54,7 @@ public class BuyerFindFarmerDisplayActivity extends AppCompatActivity {
             public void onClick(View v) {
                 System.out.println("here "+farmer.getId());
                 app.getDao().addFarmerToUserList(farmer, app.getCurrentUser());
-                Intent intent = new Intent(BuyerFindFarmerDisplayActivity.this, FarmerStockListActivity.class);
+                Intent intent = new Intent(BuyerFindFarmerDisplayActivity.this, BuyerViewFarmerStockListActivity.class);
                 intent.putExtra("selected_farmer",farmer);
                 startActivity(intent);
             }

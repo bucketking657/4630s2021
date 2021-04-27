@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.test.farm6.Buyer.BuyerMainActivity;
 import com.test.farm6.Farmer.FarmerMainActivity;
 import com.test.farm6.model.User;
 
@@ -22,7 +23,6 @@ public class RegisterBuyerActivity extends AppCompatActivity {
     private TextInputLayout buyer_last_name;
     private TextInputLayout buyer_Email;
     private TextInputLayout buyer_password;
-    private TextInputLayout city;
     private Button submit;
     FirebaseAuth fAuth;
     FirebaseFirestore fstore;
@@ -82,24 +82,8 @@ public class RegisterBuyerActivity extends AppCompatActivity {
 
                             app.getDao().saveUser(buyer,userid);
 
-                            /*DocumentReference docRef = fstore.collection("Buyer").document(userid);
 
-                            Map<String, Object> buyer = new HashMap<>();
-                            buyer.put("fname",firstName);
-                            buyer.put("lname",lastname);
-                            buyer.put("email",email);
-                            buyer.put("password",password);
-                            docRef.set(buyer).addOnSuccessListener(aVoid -> Log.d("TAG","onSucess"));*/
-
-                        /**   DocumentReference docFarmer = fstore.collection("My Farmers").document(userid).
-                                    get().addOnSuccessListener(documentSnapshot -> {
-                                        ArrayList<Farmer> myList = new ArrayList<Farmer>();
-                                        for(QueryDocumentSnapshot ignored : documentSnapshot){
-
-                                        }
-                                  });*/
-
-                            startActivity(new Intent(getApplicationContext(), FarmerMainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), BuyerMainActivity.class));
 
                         } else {
                             System.out.println("Inside exception else");

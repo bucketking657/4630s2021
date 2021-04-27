@@ -1,4 +1,4 @@
-package com.test.farm6.Farmer;
+package com.test.farm6.Farmer.Stock;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +9,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.test.farm6.FarmApplication;
 import com.test.farm6.R;
+import com.test.farm6.model.Farmer;
 
 public class FarmerStockUpdateChoiceActivity extends AppCompatActivity {
     private Button updateStock;
     private Button add;
     private FarmApplication farmApplication;
+    private Farmer farmer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -26,6 +28,7 @@ public class FarmerStockUpdateChoiceActivity extends AppCompatActivity {
            @Override
            public void onClick(View v) {
                Intent intent = new Intent(FarmerStockUpdateChoiceActivity.this, FarmerStockListActivity.class);
+              // intent.putExtra("selected_farmer", farmer);
                startActivity(intent);
            }
        });
@@ -37,8 +40,5 @@ public class FarmerStockUpdateChoiceActivity extends AppCompatActivity {
                 startActivity(intent);
            }
        });
-
-
     }
-
 }

@@ -1,9 +1,12 @@
-package com.test.farm6.Farmer;
+package com.test.farm6.Farmer.Stock;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +24,7 @@ public class FarmerStockListActivity extends AppCompatActivity implements Farmer
     private RecyclerView farmerStockRecyclerView;
     private FarmApplication app;
     private Farmer farmer;
+    private Stock selectedStock;
     FarmerStockAdapter adapter;
 
     @Override
@@ -28,14 +32,25 @@ public class FarmerStockListActivity extends AppCompatActivity implements Farmer
         super.onCreate(savedInstanceState);
         setContentView(R.layout.farmer_stock_list);
         setUp();
-        farmer = getIntent().getParcelableExtra("farmer");
-       // app.getDao().retrieveStockForFarmer(farmer);
     }
+
     @Override
-    public void onItemClick(int position) {
+    public void onItemClick(Stock stock) {
         Intent intent = new Intent(this, FarmerStockDisplayActivity.class);
-        intent.putExtra("selected_stock", farmer);
-        startActivity(intent);
+        intent.putExtra("selected_stock", stock);
+        startActivityForResult(intent,0);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK){
+            Stock stock = data.getParcelableExtra("stock");
+            farmer.getStock().put(stock.getId(),stock);
+            stocks.clear();
+            stocks.addAll(farmer.getStock().values());
+            adapter.notifyDataSetChanged();
+        }
     }
 
     private void setUp(){
@@ -43,15 +58,13 @@ public class FarmerStockListActivity extends AppCompatActivity implements Farmer
         farmerStockRecyclerView = (RecyclerView) findViewById(R.id.recyclerView_stock);
         adapter = new FarmerStockAdapter( stocks, this);
         farmerStockRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL );
+        dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.divider_for_white_background));
+        farmerStockRecyclerView.addItemDecoration(dividerItemDecoration);
         farmerStockRecyclerView.setAdapter(adapter);
+        farmer = (Farmer) app.getCurrentUser();
+        stocks.addAll(farmer.getStock().values());
+        adapter.notifyDataSetChanged();
 
-        app.getDao().retrieveStockForFarmer(new FarmDAO.RetrieveStockForFarmerHandler() {
-            @Override
-            public void stockRetrieved(List<Stock> stocks) {
-                FarmerStockListActivity.this.stocks.clear();
-                FarmerStockListActivity.this.stocks.addAll(stocks);
-                adapter.notifyDataSetChanged();
-            }
-        });
     }
 }

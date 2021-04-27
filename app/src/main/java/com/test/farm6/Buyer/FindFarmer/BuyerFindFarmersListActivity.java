@@ -1,13 +1,13 @@
-package com.test.farm6.Buyer;
+package com.test.farm6.Buyer.FindFarmer;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.test.farm6.Buyer.MenuActivity;
 import com.test.farm6.FarmDAO;
 import com.test.farm6.FarmApplication;
 import com.test.farm6.R;
@@ -16,16 +16,11 @@ import com.test.farm6.model.Farmer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BuyerFindFarmersListActivity extends AppCompatActivity implements BuyerFindFarmersAdapter.FindFarmerClickListener {
+public class BuyerFindFarmersListActivity extends MenuActivity implements BuyerFindFarmersAdapter.FindFarmerClickListener {
     private final ArrayList<Farmer> farmers = new ArrayList<>();
     private RecyclerView farmerRecyclerView;
     private FarmApplication farmApp;
     private BuyerFindFarmersAdapter adapter;
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.shoppingmenu,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -46,8 +41,11 @@ public class BuyerFindFarmersListActivity extends AppCompatActivity implements B
         farmerRecyclerView = (RecyclerView) findViewById(R.id.buyer_FindFarmerRecyclerView);
         adapter = new BuyerFindFarmersAdapter(farmers, this);
         farmerRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL );
+        dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.divider));
+        farmerRecyclerView.addItemDecoration(dividerItemDecoration);
         farmerRecyclerView.setAdapter(adapter);
-        //needs to be retrieve all farmers
+
         farmApp.getDao().retrieveFarmers(new FarmDAO.RetrieveFarmersHandler() {
             @Override
             public void farmersRetrieved(List<Farmer> farmers) {

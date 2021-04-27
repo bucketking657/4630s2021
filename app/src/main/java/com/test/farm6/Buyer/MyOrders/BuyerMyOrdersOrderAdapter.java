@@ -1,4 +1,4 @@
-package com.test.farm6.Buyer;
+package com.test.farm6.Buyer.MyOrders;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,29 +10,26 @@ import com.test.farm6.R;
 import com.test.farm6.model.Order;
 import java.util.List;
 
-public class BuyerPlacedOrderAdapter extends RecyclerView.Adapter<BuyerPlacedOrderAdapter.MyViewHolder> {
-
+public class BuyerMyOrdersOrderAdapter extends RecyclerView.Adapter<BuyerMyOrdersOrderAdapter.MyViewHolder> {
     private List<Order> list;
     private OrderListItemClickListener listener;
 
-
-    public BuyerPlacedOrderAdapter(List<Order> list, OrderListItemClickListener listener){
+    public BuyerMyOrdersOrderAdapter(List<Order> list, OrderListItemClickListener listener){
         this.list = list;
         this.listener = listener;
     }
 
     @NonNull
     @Override
-    public BuyerPlacedOrderAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BuyerMyOrdersOrderAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.buyer_order_row, parent,false);
-
-        return new BuyerPlacedOrderAdapter.MyViewHolder(view, listener);
+        return new BuyerMyOrdersOrderAdapter.MyViewHolder(view, listener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.orderNumber.setText("Order Number: " + (1+list.get(position).getPositionNumber(position)));
-        holder.orderStatus.setText(list.get(position).getOrderStatus());
+        holder.orderNumber.setText("Order Number: " + (position + 1));
+        holder.orderStatus.setText(list.get(position).getStatus());
     }
 
     @Override
@@ -51,7 +48,6 @@ public class BuyerPlacedOrderAdapter extends RecyclerView.Adapter<BuyerPlacedOrd
             orderStatus = itemView.findViewById(R.id.buyer_order_status);
             itemView.setOnClickListener(this);
             this.listener = listener;
-
         }
 
         @Override

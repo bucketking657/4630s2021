@@ -3,30 +3,46 @@ package com.test.farm6.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.test.farm6.FarmApplication;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Order implements Parcelable {
-    private ArrayList<OrderLine> orderLines;
-    private boolean status;
-    private String orderStatus;
-    private String orderTotal;
-    private String items;
+
+    private String id;
+    private User owner;
+    private List<OrderLine> orderLines = new ArrayList<>();
+    private String status;
+    private Double total;
+    private Integer position = 0;
+    private Farmer farmer;
 
 
-    public Order(){
-        this.status = false;
-        orderLines = new ArrayList<>();
-        this.orderStatus = orderStatus();
-        this.orderTotal = String.valueOf(calcTotal());
-        this.items = getList();
+    public Order() {
+        this.orderLines = new ArrayList<>();
+        this.status = orderStatus();
+        this.total = calcTotal();
     }
 
     protected Order(Parcel in) {
-        status = in.readByte() != 0;
-        orderStatus = in.readString();
-        orderTotal = in.readString();
-        items = in.readString();
+        id = in.readString();
+        owner = in.readParcelable(User.class.getClassLoader());
+        Integer size = in.readInt();
+        orderLines.clear();
+        for(int i=0;i<size;i++){
+            orderLines.add(in.readParcelable(OrderLine.class.getClassLoader()));
+        }
+        status = in.readString();
+        total = in.readDouble();
+        position = in.readInt();
+        farmer = in.readParcelable(Farmer.class.getClassLoader());
+    }
 
+    public User getOwner() { return owner; }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 
     public static final Creator<Order> CREATOR = new Creator<Order>() {
@@ -44,73 +60,96 @@ public class Order implements Parcelable {
     @Override
     public int describeContents() { return 0; }
 
-    public String getOrderStatus(){ return orderStatus; }
+    public String getStatus() { return status; }
 
-    public String getOrderTotalString(){ return orderTotal; }
+    public Double getOrderTotalString() { return total; }
 
-    String temp = "";
-    public String getList(){
+    public String getList() {
+        String temp = "";
         for (OrderLine orderLine : orderLines) {
             temp = temp + orderLine.toString() + '\n';
         }
         return temp;
     }
+
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeByte((byte) (status ? 1 : 0));
-        dest.writeString(orderStatus);
-        dest.writeString(String.valueOf(calcTotal()));
-        dest.writeString((items));
+        dest.writeString(id);
+        dest.writeParcelable(owner, 0);
+        dest.writeInt(orderLines.size());
+        for(OrderLine orderLine: orderLines){
+            dest.writeParcelable(orderLine,0);
+        }
+        dest.writeString(status);
+        dest.writeDouble(calcTotal());
+        dest.writeInt(position);
+        dest.writeParcelable(farmer, 0);
     }
 
-    public double calcTotal(){
+    public double calcTotal() {
         double total = 0;
 
         for (OrderLine orderLine : orderLines) {
-            total = total + orderLine.getProduct().getPrice()*orderLine.getQuantity();
+            total = total + orderLine.calcTotal();
         }
-
         return total;
     }
 
-    public String orderStatus(){
+    public String orderStatus() {
         String state = "Processed";
-        if (!status){
-            state = "Unprocessed";
-        }
         return state;
     }
 
     @Override
     public String toString() {
-        String return_string = "This Order is order status " + orderStatus() +"\n";
-        for (OrderLine orderLine: orderLines) {
+        String return_string = "This Order is order status " + orderStatus() + "\n";
+        for (OrderLine orderLine : orderLines) {
             return_string = return_string + orderLine.toString() + "\n";
         }
-
-        return_string =  return_string + "This is you total " + calcTotal();
+        return_string = return_string + "This is you total " + calcTotal();
 
         return return_string;
     }
 
-
-    public OrderLine get(int position){ return orderLines.get(position); }
-
-    public int getPositionNumber(int position){
+    public Integer getPosition() {
         return position;
-    };
+    }
 
-    public void addProduct(Product p){ /*orderLines.add(p);*/ }
+    public void setPosition(Integer position) {
+        this.position = position;
+    }
 
-    public boolean getStatus(){ return status; }
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
-    public void setStatus(boolean newValue){ status = newValue; }
+    public Double getTotal() {
+        return total;
+    }
 
-    public ArrayList<OrderLine> getOrderLines() {
+    public void setTotal(Double total) {
+        this.total = total;
+    }
+
+    public List<OrderLine> getOrderLines() {
         return orderLines;
     }
 
     public void setOrderLines(ArrayList<OrderLine> orderLines) {
         this.orderLines = orderLines;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Farmer getFarmer() { return farmer; }
+
+    public void setFarmer(Farmer farmer) { this.farmer = farmer; }
+
+
 }
